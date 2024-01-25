@@ -19,6 +19,7 @@
     }
 }
 #keyboard{
+    border: 2px black solid;
     width: 280px;
     height: 100px;
     background-color: wheat;
@@ -41,6 +42,7 @@
     }
 }
 .word{
+    border: 2px black solid;
     width: 280px;
     height: 50px;
     border-radius: 25px;
@@ -51,4 +53,11 @@
         font-weight: bold;
         font-family: calibri;
     }
+}
+#mistake{
+    // width: 280px;
+    // height: 280px;
+    background-color: wheat;
+    border-radius: 10px;
+    border: 2px black solid;
 }
