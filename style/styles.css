@@ -4,6 +4,26 @@
   box-sizing: border-box;
 }
 
+@keyframes keyAnime1 {
+  50% {
+    transform: scale(1.3, 1.3);
+    background-color: lime;
+  }
+  100% {
+    transform: none;
+    background-color: limegreen;
+  }
+}
+@keyframes keyAnime2 {
+  50% {
+    transform: scale(1.2, 1.2);
+    background-color: orangered;
+  }
+  100% {
+    transform: none;
+    background-color: red;
+  }
+}
 .parent {
   background-color: rgb(149, 190, 225);
   width: 100vw;
@@ -39,6 +59,7 @@
   font-size: larger;
   width: 25px;
   margin: 0px 1px;
+  border-radius: 5px;
 }
 
 .word {
@@ -56,10 +77,21 @@
   font-size: x-large;
   font-weight: bold;
   font-family: calibri;
+  visibility: hidden;
 }
 
 #mistake {
   background-color: wheat;
   border-radius: 10px;
   border: 2px black solid;
+}
+
+.correctKey {
+  animation: keyAnime1 0.7s;
+  animation-fill-mode: forwards;
+}
+
+.wrongKey {
+  animation: keyAnime2 0.7s;
+  animation-fill-mode: forwards;
 }/*# sourceMappingURL=styles.css.map */

@@ -168,6 +168,14 @@
           this.mistakes = 0;
           // this.hangman()
         }
+        check(letter, key){
+          if(this.wordarr.indexOf(letter)>-1){
+            $(key).addClass("correctKey")
+          }
+          else{
+            $(key).addClass("wrongKey")
+          }
+        }
         // hangman(){
         //   c.beginPath()
         //   c.moveTo(40,240)
@@ -196,10 +204,10 @@
       let key = $(".key");
 
       $(document).ready(function () {
-        let name = new word();
+        let word1 = new word();
 
         key.click(function () {
-          console.log($(this).text());
+          word1.check($(this).text(), $(this))
         });
       });
     </script>
