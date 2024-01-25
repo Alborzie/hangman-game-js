@@ -171,10 +171,27 @@
         check(letter, key){
           if(this.wordarr.indexOf(letter)>-1){
             $(key).addClass("correctKey")
+            for(let item of worddv.children()){
+              if($(item).text()==letter){
+                $(item).addClass("activeLetter")
+                $(item).css({"visibility":"visible"})
+              }
+            }
+            $(key).attr({"disabled":"true"})
+            for(let item of worddv.children()){
+              if(!$(item).hasClass("activeLetter")){
+                return
+              }
+            }
+            setTimeout(() => {
+              alert("game is over, YOU WON!!")
+            }, 1500);
           }
           else{
             $(key).addClass("wrongKey")
+            $(key).attr({"disabled":"true"})
           }
+          
         }
         // hangman(){
         //   c.beginPath()

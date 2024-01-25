@@ -31,6 +31,16 @@
         background-color: red;
     }
 }
+@keyframes showLetter {
+    0%{}
+    50%{
+        transform: scale(1.5,1.5);
+        transform: rotate(1turn);
+    }
+    100%{
+        transform: none;
+    }
+}
 .parent{
     background-color: rgb(149, 190, 225);
     width: 100vw;
@@ -89,5 +99,9 @@
 }
 .wrongKey{
     animation: keyAnime2 0.7s;
+    animation-fill-mode: forwards;
+}
+.activeLetter{
+    animation: showLetter 1.4s;
     animation-fill-mode: forwards;
 }
