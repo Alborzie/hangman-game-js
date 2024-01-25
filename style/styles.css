@@ -1,0 +1,22 @@
+#keyboard {
+  width: 350px;
+  height: 120px;
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+#keyboard div {
+  height: 25%;
+  margin: 5px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#keyboard div button {
+  font-size: larger;
+  width: 30px;
+  margin-left: 5px;
+}/*# sourceMappingURL=styles.css.map */
