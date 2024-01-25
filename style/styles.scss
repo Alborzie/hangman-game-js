@@ -3,20 +3,20 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 @mixin flex($just:"baseline", $align:"baseline", $dir:"row"){
     display: flex;
     justify-content:$just;
     align-items: $align;
     flex-direction: $dir;
 }
-
 .parent{
     background-color: rgb(149, 190, 225);
     width: 100vw;
     height: 100vh;
-    @include flex(center,center,column);
-
+    @include flex(center,center,column-reverse);
+    div{
+        margin: 10px 0px;
+    }
 }
 #keyboard{
     width: 280px;
@@ -38,5 +38,17 @@
             width: 25px;
             margin: 0px 1px;
         }
+    }
+}
+.word{
+    width: 280px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: wheat;
+    @include flex(space-around,center,row);
+    .letter{
+        font-size:x-large;
+        font-weight: bold;
+        font-family: calibri;
     }
 }
